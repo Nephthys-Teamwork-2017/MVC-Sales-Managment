@@ -9,6 +9,8 @@ namespace SalesInsuranceManagment
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            var context = new InsManageSysDbContext();
+            context.Database.Initialize(true);
         }
     }
 }
